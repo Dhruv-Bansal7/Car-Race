@@ -15,7 +15,7 @@ ArrowLeft: false,
 ArrowRight: false,
 }
 let player = {
-speed: 5,
+speed: 15,
 score: 0,
 highScore: 0
 };
@@ -78,7 +78,7 @@ car.style.top = player.y + "px";
 car.style.left = player.x + "px";
 highScore.innerHTML = "HighScore" + ":" + (player.highScore - 1);
 player.score++;
-player.speed += 0.001;
+player.speed += 0.01;
 if (player.highScore < player.score) {
 player.highScore++;
 highScore.innerHTML = "HighScore" + ":" + (player.highScore - 1);
@@ -120,6 +120,6 @@ return !((aRect.top > bRect.bottom) || (aRect.bottom < bRect.top) || (aRect.righ
 //game is end
 function endGame() {
 player.isStart = false;
-player.speed = 5;
+player.speed = 15;
 startScreen.classList.remove('hide');
 }
